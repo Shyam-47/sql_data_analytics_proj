@@ -1,44 +1,37 @@
-# SQL Data Analytics Project
+# 📊 SQL Data Analytics Project
 
-
-The materials of the data analytics project: the data, every query from the videos, and the project roadmap.
-
-You explore a sales database step by step, then go deeper with trends, segments and two full reports.
-
-**New here? Open the setup guide in the `00_setup` folder.** It walks you through installing SQL Server and creating the database, on Windows and Mac, with the fixes for the common errors.
-
-```
-sql-data-analytics-project/
-├── 00_setup/                        the setup guide, and the one-click Docker start for Mac
-├── 01_datasets/                     the data, as a backup and as CSV files
-│   ├── DataWarehouseAnalytics.bak   the database, ready to restore
-│   └── csv-files/                   the same data, to build the database yourself
-├── 02_docs/                         the project roadmap and notes
-└── 03_scripts/                      the queries, in the order of the videos
-    └── 00_init_database.sql         builds the database from the CSV files
-```
-
-Get the database in one of two ways:
-
-- Restore `01_datasets/DataWarehouseAnalytics.bak` in SSMS. It needs SQL Server 2022 or newer.
-- Or run `03_scripts/00_init_database.sql`. It builds the database from the CSV files in `C:\sql\sql-data-analytics-project\01_datasets\csv-files\`.
-
-The videos show the folders without numbers: `datasets` there is `01_datasets` here, `scripts` is `03_scripts`.
+An advanced SQL data analytics repository showcasing business intelligence techniques such as changes over time, cumulative aggregations, performance analysis, data segmentation, and part-to-whole analysis.
 
 ---
 
-## 🗺️ What you build
+## 📁 Repository Structure
 
-
-The project has two parts, and the scripts follow them:
-
-- **Exploratory data analysis**, scripts `01` to `06`: you get to know the data, from the tables and dates to the big numbers and the top performers.
-- **Advanced analytics**, scripts `07` to `13`: you go deeper with trends, running totals, performance, part-to-whole and segments. Two reports close the project, one for customers and one for products.
+* **02_datasets/**: Contains data backups (`DataWarehouseAnalytics.bak`) and raw CSV files for database loading.
+* **03_scripts/**: Contains SQL scripts for database initialization, exploratory data analysis, and advanced analytics queries.
+* **LICENSE**: Project license terms (MIT License).
 
 ---
 
+## ⚙️ Getting Started
+
+### Database Setup
+You can set up the database using either of the following methods:
+
+1. **Database Restore (Recommended):** Restore `02_datasets/DataWarehouseAnalytics.bak` directly using SQL Server Management Studio (SSMS) *(Requires SQL Server 2022 or newer)*.
+2. **Build from Source CSVs:** Execute the initialization script in `03_scripts/` to construct the database schema and populate tables directly from `02_datasets/csv_files/`.
+
+---
+
+## 🗺️ Project Scope & Analytical Techniques
+
+This project demonstrates various core data analysis patterns using **T-SQL**:
+- **Changes Over Time:** Tracking trends, periodic growth, and time-series metrics.
+- **Cumulative Analysis:** Running totals and moving averages.
+- **Performance Analysis:** Evaluating performance benchmarks across dimensions.
+- **Data Segmentation:** Grouping customers and products into behavioral tiers.
+- **Part-to-Whole Analysis:** Measuring individual contributions against totals.
+
+---
 
 ## 🛡️ License
-
-[MIT](LICENSE). Use it, change it, share it, with attribution.
-
+Distributed under the [MIT License](LICENSE).
